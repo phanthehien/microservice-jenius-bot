@@ -1,0 +1,10 @@
+{
+  "name": "microservice-jenius-bot",
+  "version": "1.0.0",
+  "description": "Microservice Jenius Bot",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HieuVP",
+  "license": "ISC"
+}
