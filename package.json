@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Microservice Jenius Bot",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "backpack | bunyan"
   },
   "author": "HieuVP",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "backpack-core": "^0.4.2",
+    "bunyan": "^1.8.12",
+    "hapi": "^16.5.2"
+  }
 }
