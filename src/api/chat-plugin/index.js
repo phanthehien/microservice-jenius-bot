@@ -11,6 +11,10 @@ internals.applyRoutes = (server, next) => {
 
 exports.register = (server, opts, next) => {
 
+  server.dependency([
+    'swagger'
+  ], internals.applyRoutes);
+
   return next();
 };
 
