@@ -1,0 +1,35 @@
+.DS_Store
+.nvmrc # this breaks circleci builds
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# node-waf configuration
+.lock-wscript
+
+# Optional npm cache directory, and NPM creds.
+.npm
+.npmrc
+
+# Optional REPL history
+.node_repl_history
+
+# The artifacts folder only contains binaries, coverage reports etc.
+artifacts/
+
+# tests shouldn't be baked in making the image
+test/
+
+# dotenv environment variables file
+.env
+
+# JetBrains
+.idea/
+
+# Dependency directories
+node_modules/
+
+# Build
+build/
