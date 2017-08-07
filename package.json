@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Microservice Jenius Bot",
   "scripts": {
+    "start": "node ./build/main.js",
+    "build": "backpack build",
     "dev": "backpack | bunyan"
   },
   "author": "HieuVP",
