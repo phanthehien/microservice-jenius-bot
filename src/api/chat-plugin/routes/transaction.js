@@ -6,8 +6,8 @@ module.exports = {
   config: {
     tags: ['api', 'docs', 'transaction'],
     auth: false,
-    description: 'Send Message API',
-    notes: 'Performs a communicating operation',
+    description: 'Show Transaction API',
+    notes: 'Performs a transaction history operation',
     plugins: {
       'hapi-swagger': {
         responses: {

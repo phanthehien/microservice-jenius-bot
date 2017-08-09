@@ -6,8 +6,8 @@ module.exports = {
   config: {
     tags: ['api', 'docs', 'balance'],
     auth: false,
-    description: 'Send Message API',
-    notes: 'Performs a communicating operation',
+    description: 'Show Balance API',
+    notes: 'Performs a checking active balance operation',
     plugins: {
       'hapi-swagger': {
         responses: {

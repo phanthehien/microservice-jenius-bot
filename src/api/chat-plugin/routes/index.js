@@ -1,6 +1,6 @@
-import balance from './balance';
-import transaction from './transaction';
-import transfer from './transfer';
+const balance = require('./balance');
+const transaction = require('./transaction');
+const transfer = require('./transfer');
 
 module.exports = [
   balance,
