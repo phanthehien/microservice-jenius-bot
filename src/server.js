@@ -1,5 +1,6 @@
 const hapi = require('hapi');
 
+const Config = require('../config');
 const swaggerPlugin = require('./api/swagger-plugin');
 const chatPlugin = require('./api/chat-plugin');
 
@@ -7,10 +8,10 @@ const server = new hapi.Server();
 
 server.connection([
   {
-    host: '0.0.0.0',
-    port: 3000,
+    host: Config.get('/host'),
+    port: Config.get('/port'),
     routes: { cors: true },
-    labels: ['api', 'docs', 'upload']
+    labels: ['api', 'docs', 'chat']
   }
 ]);
 
@@ -18,6 +19,9 @@ const plugins = [
   {
     register: swaggerPlugin,
     select: ['api', 'docs'],
+    options: {
+      config: Config.get('/')
+    }
   },
   {
     register: chatPlugin,

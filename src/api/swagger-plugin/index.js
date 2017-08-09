@@ -2,9 +2,8 @@ const inert = require('inert');
 const vision = require('vision');
 const swagger = require('hapi-swagger');
 
-const pkg = require('../../../package.json');
-
 module.exports.register = (server, opts, next) => {
+  const { config } = opts;
 
   const plugins = [
     {
@@ -21,10 +20,10 @@ module.exports.register = (server, opts, next) => {
       cache: { expiresIn: 24 * 60 * 60 * 1000 },
       options: {
         info: {
-          title: pkg.description,
-          version: pkg.version
+          title: config.description,
+          version: config.api.version
         },
-        documentationPath: '/docs'
+        documentationPath: config.docs.path,
       }
     },
   ];

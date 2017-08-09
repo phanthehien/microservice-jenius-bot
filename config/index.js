@@ -13,7 +13,9 @@ const config = {
     path: '/docs'
   },
   resources: {
-    database: {}
+    docker: {
+      username: process.env.DOCKER_USERNAME || 'hieuvp'
+    }
   }
 };
 
