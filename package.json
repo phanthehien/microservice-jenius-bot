@@ -12,6 +12,7 @@
   "dependencies": {
     "backpack-core": "^0.4.2",
     "bunyan": "^1.8.12",
+    "confidence": "^3.0.2",
     "hapi": "^16.5.2",
     "hapi-swagger": "^7.7.0",
     "inert": "^4.2.1",
