@@ -1,6 +1,8 @@
 const hapi = require('hapi');
 
 const Config = require('../config');
+const database = require('../asset/test-data.json');
+
 const swaggerPlugin = require('./api/swagger-plugin');
 const chatPlugin = require('./api/chat-plugin');
 
@@ -26,6 +28,9 @@ const plugins = [
   {
     register: chatPlugin,
     select: ['api', 'docs', 'chat'],
+    options: {
+      database
+    }
   }
 ];
 

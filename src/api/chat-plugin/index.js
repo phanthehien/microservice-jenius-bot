@@ -9,7 +9,8 @@ internals.applyRoutes = (server, next) => {
 };
 
 exports.register = (server, opts, next) => {
-  const model = Model;
+  const { database } = opts;
+  const model = new Model(database);
 
   server.ext('onPreHandler', (request, reply) => {
     Object.assign(request.server, { model });
