@@ -1,33 +1,9 @@
-const Joi = require('joi');
+import balance from './balance';
+import transaction from './transaction';
+import transfer from './transfer';
 
-module.exports = {
-  method: 'POST',
-  path: '/actions/send-message',
-  config: {
-    tags: ['api', 'docs', 'chat'],
-    auth: false,
-    description: 'Send Message API',
-    notes: 'Performs a communicating operation',
-    plugins: {
-      'hapi-swagger': {
-        responses: {
-          200: { description: 'Success' },
-          400: { description: 'Bad Request' },
-          500: { description: 'Internal Error' }
-        }
-      }
-    },
-    validate: {
-      payload: Joi.object().keys({
-        message: Joi.string().required()
-      })
-    },
-    handler(request, reply) {
-      const { model } = request.server;
-      const { message } = request.payload;
-
-      return model.send(message)
-        .then(reply);
-    }
-  }
-};
+module.exports = [
+  balance,
+  transaction,
+  transfer
+];

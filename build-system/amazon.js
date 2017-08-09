@@ -1,11 +1,11 @@
 import { run } from 'runjs';
-import pkg from '../package.json';
+import config from '../config';
 
 export default {
 
   deploy() {
-    const user = 'hieuvp';
-    const name = pkg.name;
+    const user = config.resources.docker.username;
+    const name = config.name;
     const tag = `${user}/${name}`;
 
     run(`docker build -t ${name} .`);

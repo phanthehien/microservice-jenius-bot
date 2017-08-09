@@ -1,10 +1,10 @@
 const Model = require('./models');
-const Route = require('./routes');
+const Routes = require('./routes');
 
 const internals = {};
 
 internals.applyRoutes = (server, next) => {
-  server.route(Route);
+  server.route(Routes);
   next();
 };
 
