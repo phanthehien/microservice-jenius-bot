@@ -1,11 +1,11 @@
 import { run } from 'runjs';
-import config from '../config';
+import Config from '../config';
 
 export default {
 
   deploy() {
-    const user = config.resources.docker.username;
-    const name = config.name;
+    const user = Config.get('/resources/docker/username');
+    const name = Config.get('/name');
     const tag = `${user}/${name}`;
 
     run(`docker build -t ${name} .`);
