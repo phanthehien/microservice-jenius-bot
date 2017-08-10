@@ -19,7 +19,7 @@ module.exports = {
     },
     validate: {
       payload: Joi.object().keys({
-        accountNumber: Joi.string().example('01398186938638').required()
+        accountNumber: Joi.string().example('90010000526').required()
       })
     },
     handler(request, reply) {
