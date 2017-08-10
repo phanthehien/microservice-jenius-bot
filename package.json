@@ -11,12 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "backpack-core": "^0.4.2",
+    "boom": "^5.2.0",
     "bunyan": "^1.8.12",
     "confidence": "^3.0.2",
+    "es6-error": "^4.0.2",
     "hapi": "^16.5.2",
     "hapi-swagger": "^7.7.0",
     "inert": "^4.2.1",
     "joi": "^10.6.0",
+    "json-query": "^2.2.2",
     "vision": "^4.1.1"
   },
   "devDependencies": {

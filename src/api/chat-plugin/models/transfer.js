@@ -1,5 +1,6 @@
 /**
  * @class
+ * @name Transfer
  */
 class Transfer {
 

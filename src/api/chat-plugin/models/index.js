@@ -4,6 +4,7 @@ const Transfer = require('./transfer');
 
 /**
  * @class
+ * @name Model
  * @member {Balance} balance
  * @member {Transaction} transaction
  * @member {Transfer} transfer

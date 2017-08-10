@@ -1,5 +1,6 @@
 /**
  * @class
+ * @name Transaction
  */
 class Transaction {
 

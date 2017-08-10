@@ -19,14 +19,15 @@ module.exports = {
     },
     validate: {
       payload: Joi.object().keys({
-        message: Joi.string().required()
+        accountNumber: Joi.string().example('01398186938638').required()
       })
     },
     handler(request, reply) {
       const { model } = request.server;
-      const { message } = request.payload;
+      const { accountNumber } = request.payload;
 
-      return model.send(message)
+      return model.balance
+        .query({ accountNumber })
         .then(reply);
     }
   }
