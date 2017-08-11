@@ -1,16 +1,16 @@
-// jeniusError.js
+// BaseError.js
 //
-// Exports the JeniusError class.
+// Exports the BaseError class.
 const Boom = require('boom');
 const ExtendableError = require('es6-error');
 
-// The JeniusError is the base class for all errors which will get special
+// The BaseError is the base class for all errors which will get special
 // treatment in the Hapi.js pipeline.
-class JeniusError extends ExtendableError {
+class BaseError extends ExtendableError {
 
   // All Jenius Errors have a message an a code. The code is set to specific
   // values in base classes only.
-  constructor(message, code = 'JENIUS_ERROR', statusCode = 500) {
+  constructor(message, code = 'ERROR', statusCode = 500) {
     super(message);
     this.code = code;
     this.statusCode = statusCode;
@@ -32,4 +32,4 @@ class JeniusError extends ExtendableError {
   }
 }
 
-module.exports = JeniusError;
+module.exports = BaseError;

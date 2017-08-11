@@ -1,9 +1,9 @@
-const JeniusError = require('./JeniusError');
+const BaseError = require('./BaseError');
 
-class BadUserInputError extends JeniusError {
+class BadUserInputError extends BaseError {
 
   constructor(message, code, statusCode) {
-    // We explictly forbid any attempt to override status code.
+    // We explicitly forbid any attempt to override status code.
     if (statusCode !== undefined) throw new Error('Cannot set the \'statusCode\' for an BadUserInputError.');
 
     // Create the error, always using our Jenius Error Code and the appropriate

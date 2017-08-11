@@ -1,5 +1,5 @@
 const jsonQuery = require('json-query');
-const { NotFoundError } = require('../../../error');
+const { NotFoundError } = require('../../error-plugin/index');
 
 /**
  * @class
