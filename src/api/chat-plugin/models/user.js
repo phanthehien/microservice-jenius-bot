@@ -28,6 +28,14 @@ class User {
     });
   }
 
+  /**
+   * @param {String} username
+   * @param {String} token
+   */
+  register({ username, token }) {
+    
+  }
+
 }
 
 module.exports = User;
