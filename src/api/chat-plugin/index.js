@@ -18,7 +18,7 @@ exports.register = (server, opts, next) => {
   });
 
   server.dependency([
-    'swagger'
+    'swagger', 'error'
   ], internals.applyRoutes);
 
   return next();

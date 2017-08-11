@@ -4,6 +4,7 @@ const Config = require('../config');
 const database = require('../asset/test-data.json');
 
 const swaggerPlugin = require('./api/swagger-plugin');
+const { errorPlugin } = require('./api/error-plugin');
 const chatPlugin = require('./api/chat-plugin');
 
 const server = new hapi.Server();
@@ -24,6 +25,9 @@ const plugins = [
     options: {
       config: Config.get('/')
     }
+  },
+  {
+    register: errorPlugin,
   },
   {
     register: chatPlugin,
