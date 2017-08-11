@@ -1,13 +1,13 @@
 const Joi = require('joi');
 
 module.exports = {
-  method: 'POST',
-  path: '/actions/show-transaction',
+  method: 'GET',
+  path: '/transaction/{transactionId}',
   config: {
     tags: ['api', 'docs', 'transaction'],
     auth: false,
     description: 'Show Transaction API',
-    notes: 'Performs a transaction history operation',
+    notes: 'Performs a transaction operation',
     plugins: {
       'hapi-swagger': {
         responses: {
@@ -18,15 +18,16 @@ module.exports = {
       }
     },
     validate: {
-      payload: Joi.object().keys({
-        message: Joi.string().required()
-      })
+      params: {
+        transactionId: Joi.string().required()
+      }
     },
     handler(request, reply) {
       const { model } = request.server;
-      const { message } = request.payload;
+      const { transactionId } = request.params;
 
-      return model.send(message)
+      return model.transaction
+        .query({ transactionId })
         .then(reply);
     }
   }
