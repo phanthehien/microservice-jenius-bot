@@ -1,9 +1,9 @@
-const balance = require('./balance');
+const user = require('./user');
 const transaction = require('./transaction');
 const transfer = require('./transfer');
 
 module.exports = [
-  balance,
+  user,
   transaction,
   transfer
 ];

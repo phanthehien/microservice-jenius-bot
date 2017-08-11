@@ -1,13 +1,13 @@
 const Joi = require('joi');
 
 module.exports = {
-  method: 'POST',
-  path: '/actions/show-balance',
+  method: 'GET',
+  path: '/users/{username}',
   config: {
-    tags: ['api', 'docs', 'balance'],
+    tags: ['api', 'docs', 'user'],
     auth: false,
-    description: 'Show Balance API',
-    notes: 'Performs a checking active balance operation',
+    description: 'Show User API',
+    notes: 'Performs a user operation',
     plugins: {
       'hapi-swagger': {
         responses: {
@@ -18,16 +18,16 @@ module.exports = {
       }
     },
     validate: {
-      payload: Joi.object().keys({
-        accountNumber: Joi.string().example('90010000526').required()
-      })
+      params: {
+        username: Joi.string().required()
+      }
     },
     handler(request, reply) {
       const { model } = request.server;
-      const { accountNumber } = request.payload;
+      const { username } = request.params;
 
-      return model.balance
-        .query({ accountNumber })
+      return model.user
+        .query({ username })
         .then(reply);
     }
   }
