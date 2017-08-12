@@ -3,14 +3,14 @@
     {
       "preferences": {},
       "profile": {
-        "firstName": "Mock Transaction History",
-        "lastName": "Do not delete from Test Data",
+        "firstName": "Cipta",
+        "lastName": "Pratama",
         "password": "123456",
-        "cashtag": "$rambh",
+        "cashtag": "$cipta",
         "avatarUrl": "https://qph.ec.quoracdn.net/main-thumb-1978766-200-jtXmJV3BlvhQi7VC3bGvm9zo17EBhopS.jpeg",
         "phone": "+6281281147378",
         "email": "tiang_cheng@mckinsey.com",
-        "username": "ram"
+        "username": "cipta"
       },
       "accounts": [
         {
@@ -110,14 +110,14 @@
     {
       "preferences": {},
       "profile": {
-        "firstName": "Bao",
-        "lastName": "Tran",
+        "firstName": "Hieu",
+        "lastName": "Van",
         "password": "123456",
-        "cashtag": "$bao",
+        "cashtag": "$hieu",
         "avatarUrl": "https://qph.ec.quoracdn.net/main-thumb-1978766-200-jtXmJV3BlvhQi7VC3bGvm9zo17EBhopS.jpeg",
         "phone": "+6281281147480",
         "email": "bao.tran@btpn.co.id",
-        "username": "baotran"
+        "username": "hieu"
       },
       "accounts": [
         {
@@ -166,14 +166,14 @@
     {
       "preferences": {},
       "profile": {
-        "firstName": "Xuan",
-        "lastName": "Nguyen",
+        "firstName": "Hien",
+        "lastName": "Phan",
         "password": "123456",
-        "cashtag": "$xuan",
+        "cashtag": "$hien",
         "avatarUrl": "https://qph.ec.quoracdn.net/main-thumb-1978766-200-jtXmJV3BlvhQi7VC3bGvm9zo17EBhopS.jpeg",
         "phone": "+6281281147485",
         "email": "xuan.nguyen@btpn.co.id",
-        "username": "xuannguyen"
+        "username": "hien"
       },
       "accounts": [
         {
@@ -211,14 +211,14 @@
     {
       "preferences": {},
       "profile": {
-        "firstName": "Alice",
-        "lastName": "Wheatherly",
+        "firstName": "Dao",
+        "lastName": "Le",
         "password": "123",
-        "cashtag": "$alice",
+        "cashtag": "$dao",
         "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/sunshinedgirl/128.jpg",
         "phone": "+6281281147378",
         "email": "alice@gmail.com",
-        "username": "alice"
+        "username": "dao"
       },
       "accounts": [
         {
