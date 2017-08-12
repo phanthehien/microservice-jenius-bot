@@ -1,5 +1,7 @@
 const jsonQuery = require('json-query');
 const { NotFoundError, BadUserInputError } = require('../../error-plugin');
+const { getToken, setToken } = require('../../../utils/redis');
+const { sendPush } = require('../../../service/fcm-push');
 
 /**
  * @class
@@ -36,6 +38,12 @@ class Transfer {
       partnerUser.transactions.push(transactionHistory.transactionId);
 
       this.database.transactionsInfo.push(transactionHistory);
+
+      getToken(ownerUser.profile.username).then((token) => {
+        sendPush(token, `You've just sent ${amount} to ${partnerUser.profile.username} succesful.`);
+        return true;
+      });
+
       resolve(ownerAccount);
     });
   }
