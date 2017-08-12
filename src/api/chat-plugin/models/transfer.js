@@ -36,7 +36,7 @@ class Transfer {
       partnerUser.transactions.push(transactionHistory.transactionId);
 
       this.database.transactionsInfo.push(transactionHistory);
-      resolve(transactionHistory);
+      resolve(ownerAccount);
     });
   }
 
@@ -75,7 +75,7 @@ class Transfer {
         isJenius: true
       },
       fee: 500,
-      ownerAccountNumber,
+      accountNumber: ownerAccountNumber,
       category: {
         name: 'TRANSPORTATION',
         id: '4'

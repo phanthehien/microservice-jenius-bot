@@ -1,5 +1,3 @@
-// @flow
-
 const redis = require('../../config/redis');
 
 const setToken = (username, token) => {
