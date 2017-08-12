@@ -33,7 +33,8 @@ const plugins = [
     register: chatPlugin,
     select: ['api', 'docs', 'chat'],
     options: {
-      database
+      database,
+      config: Config.get('/')
     }
   }
 ];

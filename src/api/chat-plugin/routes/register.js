@@ -33,7 +33,7 @@ module.exports = {
       const { token } = request.payload;
 
       return model.user
-        .query({ username })
+        .register({ username, token })
         .then(reply);
     }
   }

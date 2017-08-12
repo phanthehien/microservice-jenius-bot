@@ -15,6 +15,10 @@ const config = {
   resources: {
     docker: {
       username: process.env.DOCKER_USERNAME || 'hieuvp'
+    },
+    redis: {
+      hostname: process.env.REDIS_HOSTNAME || '0.0.0.0',
+      port: process.env.REDIS_PORT || 6379
     }
   }
 };

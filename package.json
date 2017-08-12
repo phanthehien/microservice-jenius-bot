@@ -21,7 +21,9 @@
     "inert": "^4.2.1",
     "joi": "^10.6.0",
     "json-query": "^2.2.2",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "redis": "^2.6.5",
+    "bluebird": "^3.5.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",

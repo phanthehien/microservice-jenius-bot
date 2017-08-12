@@ -14,3 +14,9 @@ services:
       - WAIT_START=1
     ports:
       - 3000:3000
+    depends_on:
+      - redis-store
+  redis-store:
+    image: redis
+    ports:
+      - 6379:6379
