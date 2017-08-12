@@ -1,7 +1,6 @@
 {
   "users": [
     {
-      "preferences": {},
       "profile": {
         "firstName": "Cipta",
         "lastName": "Pratama",
@@ -117,7 +116,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Hieu",
         "lastName": "Van",
@@ -172,7 +170,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Hien",
         "lastName": "Phan",
@@ -216,7 +213,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Dao",
         "lastName": "Le",
@@ -293,7 +289,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Bob",
         "lastName": "Marley",
@@ -363,7 +358,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Anamika",
         "lastName": "Anjani",
@@ -432,7 +426,6 @@
       ]
     },
     {
-      "preferences": {},
       "profile": {
         "firstName": "Zamar",
         "lastName": "Zimra",
@@ -1353,57 +1346,6 @@
       "transactionId": "MX00000277381974",
       "transactionTimestamp": 1502564434000,
       "debitCredit": "DEBIT"
-    }
-  ],
-  "loanRepayments": [],
-  "creditLineOffers": [
-    {
-      "cif": "4004W2",
-      "amount": 4000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004W1",
-      "amount": 99000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004W0",
-      "amount": 120000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004W0",
-      "amount": 120000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004WZ",
-      "amount": 1000000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004WZ",
-      "amount": 1000000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004WY",
-      "amount": 5000000,
-      "interest": 1.5,
-      "isValid": true
-    },
-    {
-      "cif": "4004WX",
-      "amount": 80000000,
-      "interest": 1.5,
-      "isValid": true
     }
   ]
 }
