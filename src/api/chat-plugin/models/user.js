@@ -26,8 +26,26 @@ class User {
         reject(new NotFoundError(`Could not find username ${username}`));
       }
 
-      resolve(this.database.users[key]);
+      const user = Object.assign({}, this.database.users[key]);
+      const transactions = this.getTransactions(user);
+      Object.assign(user, { transactions });
+
+      resolve(user);
     });
+  }
+
+  getTransactions(user) {
+    const transactionsInfo = this.database.transactionsInfo;
+    const { transactions: transactionIds } = user;
+
+    const transactions = transactionsInfo
+      .filter(info => transactionIds.indexOf(info.transactionId) >= 0);
+
+    transactions.sort((transactionA, transactionB) => {
+      return transactionB.transactionTimestamp - transactionA.transactionTimestamp;
+    });
+
+    return transactions;
   }
 
   /**

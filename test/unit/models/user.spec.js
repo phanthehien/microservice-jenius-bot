@@ -12,7 +12,7 @@ describe('User model ', () => {
   });
 
   it('should be able to find user by first name', () => {
-    const firstName = 'johan';
+    const firstName = 'hi';
 
     return this.user.find({ firstName })
       .then(users => {

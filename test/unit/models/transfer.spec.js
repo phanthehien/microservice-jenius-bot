@@ -18,7 +18,7 @@ describe('Transfer model ', () => {
   });
 
   it('should be able to find account number', () => {
-    const accountNumber = '90010012672';
+    const accountNumber = '90010000606';
     const keys = this.transfer.findAccount(accountNumber);
 
     const user = this.database.users[keys.userKey];
@@ -27,8 +27,8 @@ describe('Transfer model ', () => {
   });
 
   it('should decrease balance of owner and increase balance of partner', () => {
-    const ownerAccountNumber = '90010012529';
-    const partnerAccountNumber = '90010012736';
+    const ownerAccountNumber = '90010000606';
+    const partnerAccountNumber = '00109211151';
     const amount = 20000000;
 
     const ownerKeys = this.transfer.findAccount(ownerAccountNumber);
@@ -46,8 +46,8 @@ describe('Transfer model ', () => {
   });
 
   it('should update transaction history to user', () => {
-    const ownerAccountNumber = '90010012529';
-    const partnerAccountNumber = '90010012736';
+    const ownerAccountNumber = '90010000605';
+    const partnerAccountNumber = '90010000526';
     const amount = 20000000;
 
     const ownerKeys = this.transfer.findAccount(ownerAccountNumber);
