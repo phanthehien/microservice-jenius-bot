@@ -32,6 +32,16 @@
           "accountNumber": "90010000606",
           "openingDate": "2017-06-23T11:10:44.000Z",
           "status": "ACTIVE"
+        },
+        {
+          "accountId": "01398186938634",
+          "name": "Flexi Saver",
+          "currency": "IDR",
+          "balance": 80000000,
+          "type": "FLEXI_SAVING_ACCOUNT",
+          "accountNumber": "90010020082",
+          "openingDate": "2017-06-02T10:44:18.000Z",
+          "status": "ACTIVE"
         }
       ],
       "transactions": [
