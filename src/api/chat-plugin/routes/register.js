@@ -21,8 +21,8 @@ module.exports = {
       params: {
         username: Joi.string().required(),
         token: Joi.string().required()
-        .description('Push notification token')
-        .example('9001DJI000001')
+          .description('Push notification token')
+          .example('9001DJI000001')
       }
     },
     handler(request, reply) {
