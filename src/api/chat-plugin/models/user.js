@@ -31,6 +31,29 @@ class User {
   }
 
   /**
+   * @param {String} firstName
+   */
+  find({ firstName }) {
+    return new Promise((resolve, reject) => {
+      const keys = jsonQuery(`users[profile][*firstName~/^(.*)${firstName}(.*)$/i]`, {
+        data: this.database,
+        allowRegexp: true
+      }).key;
+
+      if (keys.length === 0) {
+        reject(new NotFoundError(`Could not find any user with firstName ${firstName}`));
+      }
+
+      const users = [];
+      keys.forEach(key => {
+        users.push(this.database.users[key]);
+      });
+
+      resolve(users);
+    });
+  }
+
+  /**
    * @param {String} username
    * @param {String} token
    */

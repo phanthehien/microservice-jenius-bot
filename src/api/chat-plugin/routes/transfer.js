@@ -19,9 +19,9 @@ module.exports = {
     },
     validate: {
       payload: Joi.object().keys({
-        ownerAccountNumber: Joi.string().required(),
-        partnerAccountNumber: Joi.string().required(),
-        amount: Joi.number().required(),
+        ownerAccountNumber: Joi.string().example('90010012526').required(),
+        partnerAccountNumber: Joi.string().example('90010012736').required(),
+        amount: Joi.number().example(30000000).required(),
       })
     },
     handler(request, reply) {
