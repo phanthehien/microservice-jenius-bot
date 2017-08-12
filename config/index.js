@@ -17,7 +17,7 @@ const config = {
       username: process.env.DOCKER_USERNAME || 'hieuvp'
     },
     redis: {
-      hostname: process.env.REDIS_HOSTNAME || '0.0.0.0',
+      hostname: process.env.REDIS_HOSTNAME || 'redis-store',
       port: process.env.REDIS_PORT || 6379
     }
   }
