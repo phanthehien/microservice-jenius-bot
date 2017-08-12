@@ -1,5 +1,7 @@
 const jsonQuery = require('json-query');
 const { NotFoundError } = require('../../error-plugin');
+const { getToken, setToken } = require('../../../utils/redis');
+const { sendPush } = require('../../../service/fcm-push');
 
 /**
  * @class
@@ -28,6 +30,28 @@ class User {
     });
   }
 
+  /**
+   * @param {String} username
+   * @param {String} token
+   */
+  register({ username, token }) {
+    return new Promise((resolve) => {
+      setToken(username, token)
+      resolve({ result: 'success' });
+    });
+  }
+
+  /**
+   * @param {String} username
+   * @param {String} token
+   */
+  authorize({ username }) {
+    getToken(username).then((token) => {
+      sendPush(token, 'You`ve just linked with your account.');
+      return true;
+    });
+    return Promise.resolve(username);
+  }
 }
 
 module.exports = User;
