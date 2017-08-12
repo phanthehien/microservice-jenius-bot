@@ -359,14 +359,14 @@
     },
     {
       "profile": {
-        "firstName": "Anamika",
-        "lastName": "Anjani",
-        "password": "456",
-        "cashtag": "$anamika",
-        "avatarUrl": "https://akimg2.ask.fm/assets/371/538/855/normal/001_ma.jpg",
+        "firstName": "Diem",
+        "lastName": "Vo",
+        "password": "123456",
+        "cashtag": "$diem",
+        "avatarUrl": "https://scontent.fcgk6-1.fna.fbcdn.net/v/t1.0-9/18671138_1912645319007821_7197625881695477556_n.jpg?oh=457361889414dc67020a451365950a33&oe=5A290A49",
         "phone": "+6285781147379",
-        "email": "anamika123@gmail.com",
-        "username": "anamika",
+        "email": "diem.vio@jenius.com",
+        "username": "diem",
         "averagePerMonth": 5000000
       },
       "accounts": [
@@ -423,75 +423,6 @@
         "MX00001212121211",
         "MX00001212121212",
         "MX00001212121213"
-      ]
-    },
-    {
-      "profile": {
-        "firstName": "Zamar",
-        "lastName": "Zimra",
-        "password": "456",
-        "cashtag": "$zamar",
-        "avatarUrl": "https://akimg2.ask.fm/assets/371/538/855/normal/001_ma.jpg",
-        "phone": "+62217696361",
-        "email": "zamar123@gmail.com",
-        "username": "zamar",
-        "averagePerMonth": 6000000
-      },
-      "accounts": [
-        {
-          "accountId": "01398186938643",
-          "name": "Active Balance",
-          "currency": "IDR",
-          "balance": 50000000,
-          "type": "PRIMARY_ACCOUNT",
-          "accountNumber": "00109211151",
-          "openingDate": "2017-06-10T10:44:18.000Z",
-          "status": "ACTIVE"
-        },
-        {
-          "accountId": "01398186938644",
-          "name": "E-Card",
-          "currency": "IDR",
-          "balance": 70000000,
-          "type": "ECOMMERCE_ACCOUNT",
-          "accountNumber": "90019011924",
-          "openingDate": "2017-06-10T10:44:18.000Z",
-          "status": "ACTIVE"
-        },
-        {
-          "accountId": "01398186938645",
-          "name": "Dream Saver",
-          "currency": "IDR",
-          "balance": 100000000,
-          "type": "DREAM_SAVER_ACCOUNT",
-          "accountNumber": "90010000072",
-          "openingDate": "2017-06-11T10:44:18.000Z",
-          "status": "ACTIVE"
-        },
-        {
-          "accountId": "01398186938646",
-          "name": "Flexi Saver",
-          "currency": "IDR",
-          "balance": 100000000,
-          "type": "FLEXI_SAVING_ACCOUNT",
-          "accountNumber": "90010000526",
-          "openingDate": "2017-06-12T10:44:18.000Z",
-          "status": "ACTIVE"
-        }
-      ],
-      "transactions": [
-        "MX00000277381952",
-        "MX00000277381953",
-        "MX00000277381954",
-        "MX00000277381955",
-        "MX00000277381956",
-        "MX00000277381957",
-        "MX00000277381958",
-        "MX00000277381959",
-        "MX00001212121211",
-        "MX00001212121212",
-        "MX00001212121213",
-        "MX00001212121214"
       ]
     }
   ],
