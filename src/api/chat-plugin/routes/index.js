@@ -4,6 +4,8 @@ const transaction = require('./transaction');
 const transfer = require('./transfer');
 const register = require('./register');
 const authorize = require('./authorize');
+const saveData = require('./save-data');
+const getData = require('./get-data');
 
 module.exports = [
   user,
@@ -11,5 +13,7 @@ module.exports = [
   transaction,
   transfer,
   register,
-  authorize
+  authorize,
+  saveData,
+  getData
 ];

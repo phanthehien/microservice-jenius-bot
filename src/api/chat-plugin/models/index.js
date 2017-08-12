@@ -15,6 +15,7 @@ class Model {
     this.user = new User(database);
     this.transaction = new Transaction(database);
     this.transfer = new Transfer(database);
+    this.storage = {};
   }
 
 }
