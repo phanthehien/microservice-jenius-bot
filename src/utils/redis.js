@@ -7,7 +7,7 @@ const setToken = (username, token) => {
     'USER_TOKEN',
     username, token
   ]);
-}
+};
 
 const getToken = (username) => {
   return new Promise((resolve) => {
@@ -15,7 +15,7 @@ const getToken = (username) => {
       resolve(token);
     });
   });
-}
+};
 
 module.exports = {
   setToken,

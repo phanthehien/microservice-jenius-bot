@@ -24,12 +24,16 @@ class Transfer {
       });
 
       const ownerKeys = this.findAccount(ownerAccountNumber);
-      let ownerAccount = this.database.users[ownerKeys.userKey].accounts[ownerKeys.accountKey];
+      const ownerUser = this.database.users[ownerKeys.userKey];
+      const ownerAccount = ownerUser.accounts[ownerKeys.accountKey];
       ownerAccount.balance = ownerAccount.balance - amount;
+      ownerUser.transactions.push(transactionHistory.transactionId);
 
       const partnerKeys = this.findAccount(partnerAccountNumber);
-      let partnerAccount = this.database.users[partnerKeys.userKey].accounts[partnerKeys.accountKey];
+      const partnerUser = this.database.users[partnerKeys.userKey];
+      const partnerAccount = partnerUser.accounts[partnerKeys.accountKey];
       partnerAccount.balance = partnerAccount.balance + amount;
+      partnerUser.transactions.push(transactionHistory.transactionId);
 
       this.database.transactionsInfo.push(transactionHistory);
       resolve(transactionHistory);

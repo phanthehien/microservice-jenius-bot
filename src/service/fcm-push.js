@@ -3,22 +3,22 @@ var serverKey = 'AAAAMYHtcMI:APA91bHVIzrHu1BUHvGfYKIDhykS2ZGoERZn9IezcG_7sO7Q0T8
 var fcm = new FCM(serverKey);
 
 const sendPush = (recipient, text, options = []) => {
-  const message = { 
+  const message = {
     to: recipient,
-    
+
     notification: {
-        title: 'Jeni Bot', 
-        body: text
+      title: 'Jeni Bot',
+      body: text
     }
   };
 
   fcm.send(message, (err, response) => {
-    if (err) { 
+    if (err) {
       console.log('Something has gone wrong!');
     } else {
       console.log(`Successfully sent with response: ${response}`);
     }
   });
-}
+};
 
 module.exports = { sendPush };

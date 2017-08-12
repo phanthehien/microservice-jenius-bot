@@ -36,7 +36,7 @@ class User {
    */
   register({ username, token }) {
     return new Promise((resolve) => {
-      setToken(username, token)
+      setToken(username, token);
       resolve({ result: 'success' });
     });
   }

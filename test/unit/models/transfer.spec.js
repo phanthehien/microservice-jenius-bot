@@ -45,4 +45,23 @@ describe('Transfer model ', () => {
     expect(partnerAccount.balance).to.equal(partnerAccountBalance + amount);
   });
 
+  it('should update transaction history to user', () => {
+    const ownerAccountNumber = '90010012529';
+    const partnerAccountNumber = '90010012736';
+    const amount = 20000000;
+
+    const ownerKeys = this.transfer.findAccount(ownerAccountNumber);
+    const ownerUser = this.database.users[ownerKeys.userKey];
+    const ownerNumberOfTransaction = ownerUser.transactions.length;
+
+    const partnerKeys = this.transfer.findAccount(partnerAccountNumber);
+    const partnerUser = this.database.users[partnerKeys.userKey];
+    const partnerNumberOfTransaction = partnerUser.transactions.length;
+
+    this.transfer.send({ ownerAccountNumber, partnerAccountNumber, amount });
+
+    expect(ownerNumberOfTransaction).to.equal(ownerUser.transactions.length - 1);
+    expect(partnerNumberOfTransaction).to.equal(partnerUser.transactions.length - 1);
+  });
+
 });
