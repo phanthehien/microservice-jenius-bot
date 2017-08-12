@@ -1,7 +1,5 @@
 const Joi = require('joi');
 
-const PAGE_ACCESS_TOKEN = 'EAAZAKw299QncBAPjrp1T1AT0A5h6HZAVcfx794J85tNYYKnbp4DPOtD15c5oxVmUZBNZCHesF3ojvViXyKa4fjMb6M23lZCWajLEPSNYNa0XVlIwbm4vvKe9pHlICz1Cfb1vTbRXeAL3NPTbGKGVbY9zR2ELHbLZBUlscvamZBqlgZDZD';
-
 module.exports = {
   method: 'GET',
   path: '/authorize/{username}/{redirect_uri}',
@@ -27,13 +25,13 @@ module.exports = {
     },
     handler(request, reply) {
       const { model } = request.server;
-      const { username, redirect_uri } = request.params;
+      const { username, redirect_uri, account_linking_token } = request.params;
 
       return model.user
         .authorize({ username })
         .then((authorizationCode) => {
-          const url = `${redirect_uri}?authorization_code=${authorizationCode}`;
-          console.log('URL =', url);
+          const url = `${redirect_uri}&authorization_code=${authorizationCode}`;
+          // console.log('URL =', url);
           reply.redirect(url);
         });
     }

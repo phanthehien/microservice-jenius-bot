@@ -1,8 +1,8 @@
 const Joi = require('joi');
 
 module.exports = {
-  method: 'POST',
-  path: '/users/{username}',
+  method: 'GET',
+  path: '/users/{username}/{token}',
   config: {
     tags: ['api', 'docs', 'user'],
     auth: false,
@@ -19,18 +19,15 @@ module.exports = {
     },
     validate: {
       params: {
-        username: Joi.string().required()
-      },
-      payload: Joi.object().keys({
+        username: Joi.string().required(),
         token: Joi.string().required()
-          .description('Push notification token')
-          .example('9001DJI000001')
-      }).label('Token payload')
+        .description('Push notification token')
+        .example('9001DJI000001')
+      }
     },
     handler(request, reply) {
       const { model } = request.server;
-      const { username } = request.params;
-      const { token } = request.payload;
+      const { username, token } = request.params;
 
       return model.user
         .register({ username, token })
