@@ -4,7 +4,7 @@ const PAGE_ACCESS_TOKEN = 'EAAZAKw299QncBAPjrp1T1AT0A5h6HZAVcfx794J85tNYYKnbp4DP
 
 module.exports = {
   method: 'GET',
-  path: '/authorize/{username}',
+  path: '/authorize/{username}/{redirect_uri}',
   config: {
     tags: ['api', 'docs', 'user'],
     auth: false,
@@ -21,19 +21,18 @@ module.exports = {
     },
     validate: {
       params: {
-        username: Joi.string().required()
+        username: Joi.string().required(),
+        redirect_uri: Joi.string().required()
       }
     },
     handler(request, reply) {
       const { model } = request.server;
       const { username, redirect_uri } = request.params;
-      console.log('username =', username);
 
       return model.user
         .authorize({ username })
         .then((authorizationCode) => {
-          const redirect_uri = `https://graph.facebook.com/v2.6/me?access_token=${PAGE_ACCESS_TOKEN}`;
-          const url = `${redirect_uri}&authorization_code=${authorizationCode}`;
+          const url = `${redirect_uri}?authorization_code=${authorizationCode}`;
           console.log('URL =', url);
           reply.redirect(url);
         });
